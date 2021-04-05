@@ -16,4 +16,8 @@ export class CategoryService {
   getCategories(){
     return [...this.categories];
   }
+
+  addCategory(c : Category){
+    this.categories.push(c);
+  }
 }

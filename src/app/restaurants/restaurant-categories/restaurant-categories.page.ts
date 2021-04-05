@@ -7,12 +7,12 @@ import { CategoryService } from '../services/category.service';
   templateUrl: './restaurant-categories.page.html',
   styleUrls: ['./restaurant-categories.page.scss'],
 })
-export class RestaurantCategoriesPage implements OnInit {
+export class RestaurantCategoriesPage {
   categories : Category[];
 
   constructor(private categorieServ : CategoryService) { }
 
-  ngOnInit() {
+  ionViewWillEnter() {
     this.categories = this.categorieServ.getCategories();
   }
 
